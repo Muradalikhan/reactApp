@@ -4,6 +4,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import { AboutUs, Contact, LogIn, Main, SignUp } from "../Pages";
 import PageNotFount from "../Pages/404page/404-page";
@@ -27,6 +28,9 @@ const RouterApp = () => {
                     <Route path='*' element={<PageNotFount />} />
                 </Routes>
             </Router>
+
+
+            <Footer/>
         </>
 
     )

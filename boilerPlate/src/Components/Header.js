@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
 
-            <ul>
+            <ul className='header'>
                 <li><a href='/'>Home</a></li>
                 <li><a href='/aboutus'>About</a></li>
                 <li><a href='/contact'>Contact</a></li>
