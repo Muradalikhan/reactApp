@@ -6,11 +6,15 @@
   border:1px solid lightblue;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   padding: 20px;
   list-style: none;
   
   
+}
+
+.header li{
+  margin-left: 20px;
 }
 
 .header a{
@@ -21,5 +25,8 @@
 
 .footer{
   border:1px solid lightblue;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
