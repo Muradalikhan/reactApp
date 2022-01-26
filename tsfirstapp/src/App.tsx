@@ -1,34 +1,49 @@
-
+import React, { FC, ChangeEvent, useState } from 'react';
 import './App.css';
+import { ITask } from './Interface';
 
-function App() {
+
+const App: FC = () => {
+  const [task, setTask] = useState<string>('')
+  const [deadline, setDeadline] = useState<number>(0)
+  const [todolist, SetTodolist] = useState<ITask[]>([])
 
 
-  const name: string = 'Murad'
 
-  const arr: string[] = ['red', 'blue', 'green']
+  const handleChange = (event: ChangeEvent<HTMLInputElement>):void => {
+    if (event.target.name === "task") {
+      setTask(event.target.value)
+    } else {
+      setDeadline(Number(event.target.value))
 
-  const add = (num1: number, num2: number) => {
-    const result = num1 + num2
-    console.log(result * 5)
+    }
+
   }
 
-  add(2, 3)
 
+  const addTask=():void=>{
+    const newTask={
+      taskName:task,
+      deadline:deadline
+    }
+    SetTodolist([...todolist,newTask])
 
-
-
+    console.log(todolist)
+  }
 
   return (
     <div className="App">
-      <div>hello {name}</div>
-      <br/>
-      {arr.map((item, index) => {
+      <div className='Header'>
+        <div className='Input-container'>
+          <input type='text' placeholder='task...' name='task' onChange={handleChange}  className='Input'/>
+          <input type='number' placeholder='deadline (in Days)' name='deadline' onChange={handleChange} className='Input'/>
+        </div>
 
-        return (
-          <div key={index}>{item}</div>
-        )
-      })}
+        <button className='btn' onClick={addTask}>Add Task</button>
+
+
+      </div>
+      <div className='todoList'></div>
     </div>
   );
 }
