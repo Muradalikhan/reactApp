@@ -5,6 +5,7 @@ import { userData } from './components/Data';
 import BarChart from './components/BarChart';
 import LineChart from './components/LineChart';
 import PieChart from './components/PieChart';
+import DoughnutChart from './components/DoughnutChart';
 
 
 
@@ -30,15 +31,24 @@ function App() {
 
   return (
     <div className="App">
-       <div style={{ width: 700 }}>
-        <BarChart chartData={chartData} />
+      <div className='item'>
+        <div style={{ width: 500 }}>
+          <BarChart chartData={chartData} />
+        </div>
+        <div style={{ width: 500 }}>
+          <LineChart chartData={chartData} />
+        </div>
       </div>
-       <div style={{ width: 700 }}>
-        <LineChart chartData={chartData} />
+
+      <div className='item'>
+        <div style={{ width: 300 }}>
+          <PieChart chartData={chartData} />
+        </div>
+        <div style={{ width: 300 }}>
+          <DoughnutChart chartData={chartData} />
+        </div>
       </div>
-       <div style={{ width: 700 }}>
-        <PieChart chartData={chartData} />
-      </div>
+
     </div>
   );
 }
