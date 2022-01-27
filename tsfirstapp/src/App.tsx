@@ -1,5 +1,7 @@
 import React, { FC, ChangeEvent, useState } from 'react';
 import './App.css';
+import { Person } from './components/Person';
+import { User } from './components/User';
 import { ITask } from './Interface';
 
 
@@ -33,7 +35,7 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div className='Header'>
+      {/* <div className='Header'>
         <div className='Input-container'>
           <input type='text' placeholder='task...' name='task' onChange={handleChange}  className='Input'/>
           <input type='number' placeholder='deadline (in Days)' name='deadline' onChange={handleChange} className='Input'/>
@@ -43,7 +45,13 @@ const App: FC = () => {
 
 
       </div>
-      <div className='todoList'></div>
+      <div className='todoList'></div> */}
+
+
+
+      <Person name="Murad" age={24} email='murad@gamil.com' />
+
+      <User name='Ali' age={29} isMail={true} />
     </div>
   );
 }
