@@ -12,3 +12,10 @@ export interface IUserProps {
     age:number;
     isMail:boolean;
 }
+
+export interface ILaptop{
+    brand:string;
+    model:number;
+    color:string;
+    price:number;
+}
