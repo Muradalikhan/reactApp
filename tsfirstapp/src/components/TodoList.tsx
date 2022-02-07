@@ -8,12 +8,12 @@ deadline:number;
 onClick():void
 }
 
-const TodoList=(props:Props)=>{
+const TodoList=({task,deadline,onClick}:Props)=>{
   return(
     <div className='Task-List-content' >
-        <div style={{flex:1}}>{props.task}</div>
-        <div style={{flex:1}}>{props.deadline}</div>
-        <div onClick={props.onClick} style={{cursor:'pointer'}}> x</div>
+        <div style={{flex:1}}>{task}</div>
+        <div style={{flex:1}}>{deadline}</div>
+        <div onClick={onClick} style={{cursor:'pointer'}}> x</div>
     </div>
   );
 }
