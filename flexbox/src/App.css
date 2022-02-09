@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.container{
+.container {
   margin: 20px auto;
   border: 1px solid black;
   width: 500px;
@@ -11,10 +11,10 @@
   color: white;
 
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-  
-  
+
+
 }
 
 /* .item1{background-color: rgb(241, 28, 63);font-size: 8px;}
@@ -55,7 +55,7 @@
 } */
 
 /******** container 2 **********/
-.container2{
+.container2 {
   margin: 20px auto;
   border: 1px solid black;
   width: 500px;
@@ -64,21 +64,101 @@
   color: white;
 
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   /* justify-content: center; */
-  
-  
+
+
 }
 
-.item1{background-color: rgb(241, 28, 63)}
-.item2{background-color: green;}
-.item3{background-color: rgb(47, 238, 255)}
-.item4{background-color: tomato;margin: auto;}
-.item5{background-color: blueviolet;}
-.item6{background-color: blue;}
-.item7{background-color: orangered;margin-left: auto;}
+.item1 {
+  background-color: rgb(241, 28, 63)
+}
 
-.items{
+.item2 {
+  background-color: green;
+}
+
+.item3 {
+  background-color: rgb(47, 238, 255)
+}
+
+.item4 {
+  background-color: tomato;
+  margin: auto;
+}
+
+.item5 {
+  background-color: blueviolet;
+}
+
+.item6 {
+  background-color: blue;
+}
+
+.item7 {
+  background-color: orangered;
+  margin-left: auto;
+}
+
+.items {
   padding: 10px;
-  transition:align-self 2s;
-} 
+  transition: align-self 2s;
+}
+
+/******** container 3 **********/
+.container3 {
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 500px;
+  height: 200px;
+  padding: 5px;
+  color: white;
+
+  display: flex;
+  align-items: flex-start;
+
+
+
+}
+
+.item31 {
+  background-color: rgb(241, 28, 63)
+}
+
+.item32 {
+  background-color: green;
+  align-self: center;
+}
+
+.item33 {
+  background-color: rgb(47, 238, 255);
+  align-self: flex-end;
+  flex-grow: 1;
+}
+
+.item34 {
+  background-color: tomato;
+  margin: auto;
+  flex-grow: 2
+}
+
+.item35 {
+  background-color: blueviolet;
+  align-self: flex-end;
+  flex-grow: 1;
+}
+
+.item36 {
+  background-color: blue;
+  align-self: center;
+}
+
+.item37 {
+  background-color: orangered;
+  margin-left: auto;
+  ;
+}
+
+.items3 {
+  padding: 10px;
+}
