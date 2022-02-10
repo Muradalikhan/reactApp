@@ -1,5 +1,6 @@
 
 import './App.css';
+import { Grid } from './grid';
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
         <div className='items3 item36'>Item 6</div>
         <div className='items3 item37'>Item 7</div>
       </div>
+
+      {/* grid */}
+
+    <Grid/>
+
     </div>
   );
 }
