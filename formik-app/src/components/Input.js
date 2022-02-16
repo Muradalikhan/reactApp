@@ -13,6 +13,6 @@ const Input = styled.input`
   }
 `;
 
-export default function InputComp(props) {
+export const InputComp = (props) => {
   return <Input {...props} />;
-}
+};
