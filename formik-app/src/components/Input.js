@@ -7,7 +7,7 @@ const Input = styled.input`
   padding: 10px;
   border-radius: 5px;
   font-size: 18px;
-  width: 100%;
+  width: ${(props) => (props.width ? props.width : "100%")};
   &:focus {
     outline: 2px solid skyblue;
   }
