@@ -1,0 +1,112 @@
+.profile1Section {
+  width: 100%;
+  height: 100vh;
+  background-color: #403d39;
+  color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  height: 80px;
+}
+.name {
+  font-weight: 900;
+  font-size: 30px;
+  color: #ffcc00;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.link {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  border-bottom: none;
+  font-size: 16px;
+  transition: font-size 0.5s;
+}
+.link:hover {
+  color: #ffcc00;
+  border-bottom: 1px solid #ffcc00;
+  font-size: 20px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 50px;
+}
+/* .imgSection {
+  position: relative;
+} */
+.bgColor {
+  width: 485px;
+}
+.userImg {
+  position: absolute;
+  top: 84px;
+  left: 398px;
+  width: 250px;
+}
+.introSection {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.introSection h1 {
+  text-transform: uppercase;
+}
+.introSection .userName {
+  color: #ffcc00;
+  letter-spacing: 0.2rem;
+  transition: letter-spacing 1s;
+}
+.userName:hover {
+  letter-spacing: 1.8rem;
+  color: #ffcc00;
+}
+.profileBtn {
+  padding: 10px;
+  background-color: #ffcc00;
+  font-weight: bold;
+  border: none;
+  box-shadow: 5px 5px 5px #201d1d;
+}
+.profileBtn:active {
+  background-color: #bd9807;
+}
+
+@media only screen and (max-width: 1200px) {
+  .userImg {
+    position: absolute;
+    left: 27%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .userImg {
+    position: absolute;
+    left: 30%;
+  }
+  .introSection {
+    flex: 1;
+    background-color: rgb(85, 88, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .imgSection {
+    flex: 1;
+  }
+  .intro {
+    flex-direction: column;
+  }
+}
