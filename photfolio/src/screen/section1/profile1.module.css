@@ -109,4 +109,7 @@
   .intro {
     flex-direction: column;
   }
+  .profile1Section {
+    height: 100%;
+  }
 }
