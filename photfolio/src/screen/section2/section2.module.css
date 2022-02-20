@@ -56,9 +56,6 @@
   background-color: #bd9807;
 }
 
-@media only screen and (max-width: 1200px) {
-}
-
 @media only screen and (max-width: 900px) {
   .section2 {
     height: 100%;
