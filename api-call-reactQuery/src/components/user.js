@@ -1,9 +1,8 @@
-import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { getUser } from "./config/userSlice";
-import { addProducts } from "./config/productSlice";
+import { getUser } from "./../config/userSlice";
+import { addProducts } from "./../config/productSlice";
 
-function App() {
+function UserComp() {
   const userState = useSelector((state) => state.user.value);
   const productState = useSelector((state) => state.products.value);
   const dispatch = useDispatch();
@@ -15,7 +14,7 @@ function App() {
     dispatch(addProducts({ name: "new product", id: 11 }));
   };
   return (
-    <div className="App">
+    <div className="UserComp">
       <h1>Get User state from redux</h1>
       <div> {userState}</div>
       <button onClick={update}>update state</button>
@@ -28,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default UserComp;
