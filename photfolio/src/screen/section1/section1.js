@@ -1,11 +1,13 @@
-import Classes from "./profile1.module.css";
+import Classes from "./section1.module.css";
 import bgColor from "../../images/background-blob.svg";
 import UserImg from "../../images/userImg.png";
+import { useState } from "react";
 
-function Profile1() {
+function Section1() {
+  const [showHead, setShowHead] = useState(false);
   return (
     <div className={Classes.profile1Section}>
-      <div className={Classes.header}>
+      <div className={showHead ? Classes.showHeader : Classes.header}>
         <div className={Classes.name}>Portfolio</div>
         <div className={Classes.links}>
           <div className={Classes.link}>Home</div>
@@ -15,6 +17,10 @@ function Profile1() {
           <div className={Classes.link}>Contact</div>
         </div>
       </div>
+      <div
+        className={showHead ? Classes.Menu : Classes.MenuShort}
+        onClick={() => setShowHead(!showHead)}
+      ></div>
       <div className={Classes.intro}>
         <div className={Classes.imgSection}>
           <img src={bgColor} className={Classes.bgColor} />
@@ -40,4 +46,4 @@ function Profile1() {
   );
 }
 
-export default Profile1;
+export default Section1;
