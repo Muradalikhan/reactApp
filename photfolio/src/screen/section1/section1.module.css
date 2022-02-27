@@ -1,7 +1,7 @@
 .profile1Section {
   width: 100%;
   height: 100vh;
-  background-color: #403d39;
+  background-color: var(--bg-color-dark);
   color: white;
 }
 .header {
@@ -16,7 +16,7 @@
   top: -80px;
   left: 0;
   z-index: 100;
-  background-color: #333333;
+  background-color: var(--bg-color-header-1);
   transition: top 0.5s;
 }
 .showHeader {

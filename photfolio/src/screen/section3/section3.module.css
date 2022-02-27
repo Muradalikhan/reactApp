@@ -1,15 +1,17 @@
 .section3 {
   width: 100%;
   height: 100vh;
-  background-color: lightgrey;
+  background-color: var(--bg-color-dark);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 .header {
   text-align: center;
   width: 100%;
-  background-color: yellow;
+  background-color: var(--bg-color-header-1);
+  color: #fff;
+  padding: 20px;
 }
 .Content {
   display: flex;
@@ -17,11 +19,17 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
+  flex: 1;
 }
 .left {
+  flex: 0.5;
   background-color: yellowgreen;
 }
+.progressBar {
+  width: 500px;
+}
 .right {
+  flex: 0.5;
   background-color: yellow;
 }
 
