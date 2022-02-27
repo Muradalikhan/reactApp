@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.img-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.bucket {
+  border: 1px solid rgb(143, 141, 141);
+  width: 400px;
+  height: 400px;
+}
+.card {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+}
