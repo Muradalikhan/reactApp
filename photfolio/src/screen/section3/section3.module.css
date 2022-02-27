@@ -16,14 +16,29 @@
 .Content {
   display: flex;
   height: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  /* align-items: center; */
   gap: 50px;
   flex: 1;
 }
 .left {
   flex: 0.5;
-  background-color: yellowgreen;
+}
+.leftContent {
+  padding: 80px;
+}
+.leftContent label {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color-main);
+}
+.innerRight{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .progressBar {
   width: 500px;
