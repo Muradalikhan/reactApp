@@ -53,40 +53,49 @@ export default function Section3() {
         </div>
         <div className={classes.right}>
           <div className={classes.innerRight}>
-          <label>html</label>
-          <Progress
-            percent={88}
-            status="success"
-            type="circle"
-            width={200}
-            strokeWidth={7}
-          />
-          <label>html</label>
-          <Progress
-            percent={88}
-            status="success"
-            type="circle"
-            width={200}
-            strokeWidth={7}
-          />
-          <label>html</label>
-          <Progress
-            percent={88}
-            status="success"
-            type="circle"
-            width={200}
-            strokeWidth={7}
-          />
-          <label>html</label>
-          <Progress
-            percent={88}
-            status="success"
-            type="circle"
-            width={200}
-            strokeWidth={7}
-          />
+            <div className={classes.circle}>
+              <label className={classes.label}>html</label>
+              <Progress
+                percent={88}
+                status="success"
+                type="circle"
+                width={200}
+                strokeWidth={7}
+              />
+            </div>
+            <div className={classes.circle}>
+              <label className={classes.label}>html</label>
+              <Progress
+                percent={88}
+                status="success"
+                type="circle"
+                width={200}
+                strokeWidth={7}
+              />
+            </div>
           </div>
-         
+          <div className={classes.innerRight}>
+            <div className={classes.circle}>
+              <label className={classes.label}>html</label>
+              <Progress
+                percent={88}
+                status="success"
+                type="circle"
+                width={200}
+                strokeWidth={7}
+              />
+            </div>
+            <div className={classes.circle}>
+              <label className={classes.label}>html</label>
+              <Progress
+                percent={88}
+                status="success"
+                type="circle"
+                width={200}
+                strokeWidth={7}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

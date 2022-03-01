@@ -32,27 +32,62 @@
   font-weight: 700;
   color: var(--text-color-main);
 }
-.innerRight{
+.innerRight {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.circle {
+  margin: 0px;
+}
+.label {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
 }
 .progressBar {
   width: 500px;
 }
 .right {
   flex: 0.5;
-  background-color: yellow;
+  /* background-color: var(--text-color-main); */
+  background-image: url("../../images/background-blob.svg");
+  background-size: 900px;
+  background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 1200px) {
+  .section3 {
+    height: 100%;
+  }
+  .Content {
+    flex-direction: column;
+  }
+  .right {
+    background-size: 700px;
+    background-position: right;
+  }
+}
 @media only screen and (max-width: 900px) {
   .section3 {
     height: 100%;
   }
   .Content {
     flex-direction: column;
+  }
+  .right {
+    background-size: 700px;
+    background-position: right;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .progressBar {
+    width: 100%;
+  }
+  .right {
+    background-size: 700px;
   }
 }
