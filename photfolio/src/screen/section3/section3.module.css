@@ -54,8 +54,8 @@
 .right {
   flex: 0.5;
   /* background-color: var(--text-color-main); */
-  background-image: url("../../images/background-blob.svg");
-  background-size: 900px;
+  background-image: url("../../images/bg-1.svg");
+  background-size: 500;
   background-repeat: no-repeat;
 }
 
@@ -68,7 +68,7 @@
   }
   .right {
     background-size: 700px;
-    background-position: right;
+    background-position: -300px 100px 0 0;
   }
 }
 @media only screen and (max-width: 900px) {
