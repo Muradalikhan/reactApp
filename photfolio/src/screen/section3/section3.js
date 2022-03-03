@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./section3.module.css";
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
+import FadeIn from "react-fade-in";
 
 export default function Section3() {
   return (
@@ -11,7 +12,7 @@ export default function Section3() {
         <p>Here is what I am good at with </p>
       </div>
       <div className={classes.Content}>
-        <div className={classes.left}>
+        <div className={classes.left} data-aos="fade-up">
           <div className={classes.leftContent}>
             <label>Html</label>
             <Progress
@@ -51,7 +52,7 @@ export default function Section3() {
             />
           </div>
         </div>
-        <div className={classes.right}>
+        <div className={classes.right} data-aos="fade-up">
           <div className={classes.innerRight}>
             <div className={classes.circle}>
               <label className={classes.label}>html</label>

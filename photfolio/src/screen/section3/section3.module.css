@@ -50,13 +50,11 @@
 }
 .progressBar {
   width: 500px;
+  box-shadow: 5px 5px 5px #333;
+  padding: 20px 0;
 }
 .right {
   flex: 0.5;
-  /* background-color: var(--text-color-main); */
-  background-image: url("../../images/bg-1.svg");
-  background-size: 500;
-  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 1200px) {
