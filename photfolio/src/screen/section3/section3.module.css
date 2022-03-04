@@ -32,7 +32,7 @@
   font-weight: 700;
   color: var(--text-color-main);
 }
-.innerRight{
+.innerRight {
   padding: 20px;
   display: flex;
   flex-direction: row;

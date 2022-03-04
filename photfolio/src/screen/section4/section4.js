@@ -1,16 +1,17 @@
 import React from "react";
 import classes from "./section4.module.css";
 
-export default function Section3() {
+export default function Section4() {
   return (
-    <div className={classes.section3}>
+    <div className={classes.section4}>
       <div className={classes.header}>
-          <p>header</p>
-          <p>headerasdasdddddddd</p>
+        <h2>
+          My<span> Projects</span>
+        </h2>
+        <p>these are some of my projects as follow</p>
       </div>
       <div className={classes.Content}>
-        <div className={classes.left}>left</div>
-        <div className={classes.right}>right</div>
+        <div>cards</div>
       </div>
     </div>
   );
