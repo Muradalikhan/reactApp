@@ -25,6 +25,11 @@ export default function Section3() {
               percent={80}
               status="success"
               className={classes.progressBar}
+              theme={{
+                success: {
+                  color: "rgb(223, 105, 180)",
+                },
+              }}
             />
             <label>Html</label>
             <Progress
@@ -37,6 +42,12 @@ export default function Section3() {
               percent={80}
               status="success"
               className={classes.progressBar}
+              theme={{
+                success: {
+                  color: "rgb(223, 105, 180)",
+                  symbol: "80%",
+                },
+              }}
             />
             <label>Html</label>
             <Progress
@@ -46,9 +57,15 @@ export default function Section3() {
             />
             <label>Html</label>
             <Progress
-              percent={88}
+              percent={80}
               status="success"
               className={classes.progressBar}
+              theme={{
+                success: {
+                  color: "rgb(223, 105, 180)",
+                  symbol: "80%",
+                },
+              }}
             />
           </div>
         </div>
