@@ -3,8 +3,9 @@ import GoogleMapReact from "google-map-react";
 import img from "./images/marker.webp";
 
 const AnyReactComponent = ({ text }) => (
-  <div>
-    <img src={img} alt="img" width={100} height={100} />
+  <div style={{ backgroundColor: "white" }}>
+    <img src={img} alt="img" width={50} height={50} />
+    <div>{text}</div>
   </div>
 );
 
@@ -19,7 +20,7 @@ class SimpleMap extends Component {
 
   getMapOptions = (maps) => {
     return {
-      streetViewControl: false,
+      streetViewControl: true,
       scaleControl: true,
       fullscreenControl: false,
       styles: [
@@ -51,24 +52,23 @@ class SimpleMap extends Component {
       },
 
       zoomControl: true,
-      clickableIcons: false,
+      clickableIcons: true,
     };
   };
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "100vh", width: "100%" }}>
+      <div style={{ height: "50vh", width: "50%" }}>
         <GoogleMapReact
           options={this.getMapOptions}
           bootstrapURLKeys={{
-            key: "AIzaSyDGDvRPdFxpdk7HVYXKPMcO_-guj3--9TQ",
+            key: "AIzaSyDvQVehnjgS7mM96rUAPH7zng1Z3ggcZPY",
             // key: "AIzaSyAj-cAEEVHfEJ9arnny-8VT7x4f8f0nIO8",
           }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          isMarkerShown
         >
-          {/* <AnyReactComponent lat={24.860735} lng={67.001137} text="My Marker" /> */}
+          <AnyReactComponent lat={24.860735} lng={67.001137} text="My Marker" />
         </GoogleMapReact>
       </div>
     );
