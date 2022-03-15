@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-import img from "./images/marker.webp";
+import img from "../images/marker.webp";
 
 const AnyReactComponent = ({ text }) => (
   <div style={{ backgroundColor: "white" }}>
