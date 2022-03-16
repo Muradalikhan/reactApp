@@ -29,7 +29,7 @@ class SimpleMap extends Component {
           elementType: "labels",
           stylers: [
             {
-              visibility: "off",
+              visibility: "on",
             },
           ],
         },
@@ -68,7 +68,13 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <AnyReactComponent lat={24.860735} lng={67.001137} text="My Marker" />
+          {location.loaded && (
+            <AnyReactComponent
+              lat={24.860735}
+              lng={67.001137}
+              text="My Marker"
+            />
+          )}
         </GoogleMapReact>
       </div>
     );
