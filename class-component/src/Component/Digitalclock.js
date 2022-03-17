@@ -7,6 +7,11 @@ class Clock extends Component {
     this.state = {
       currentTime: new Date().toLocaleString(),
     };
+    console.log("constructor");
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
     this.updateTime();
   }
   updateTime = () => {
@@ -17,6 +22,8 @@ class Clock extends Component {
     }, 1000);
   };
   render() {
+    console.log("render");
+
     return (
       <div>
         <h1>{this.state.currentTime}</h1>

@@ -1,17 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, Marker } from "leaflet";
 import L from "leaflet";
-
+import "../App.css";
 import "leaflet/dist/leaflet.css";
-// import osm from "./osm-providers";
-
-import Header from "components/Header";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useGeoLocation from "hooks/useGeoLocation";
-import ExternalInfo from "components/ExternalInfo";
+import useGeoLocation from "./GeoLocatoin";
 
 const markerIcon = new L.Icon({
-  iconUrl: require("resources/images/marker.png"),
+  iconUrl: require("../images/marker.webp"),
   iconSize: [40, 40],
   iconAnchor: [17, 46], //[left/right, top/bottom]
   popupAnchor: [0, -46], //[left/right, top/bottom]
@@ -38,21 +33,12 @@ const MarkersMap = () => {
 
   return (
     <>
-      <Header title="React Leaflet Map Example" />
-
-      <ExternalInfo page="leafletCurrentLocation" />
-
       <div className="row">
         <div className="col text-center">
           <h2>React-leaflet - Get user location</h2>
           <p>Get user location and highlight it with a marker</p>
-          <div className="col">
-            <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
-              {/* <TileLayer
-                url={osm.maptiler.url}
-                attribution={osm.maptiler.attribution}
-              /> */}
-
+          <div className="map-section">
+            {/* <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
               {location.loaded && !location.error && (
                 <Marker
                   icon={markerIcon}
@@ -62,7 +48,7 @@ const MarkersMap = () => {
                   ]}
                 ></Marker>
               )}
-            </Map>
+            </Map> */}
           </div>
         </div>
       </div>
@@ -70,7 +56,7 @@ const MarkersMap = () => {
       <div className="row my-4">
         <div className="col d-flex justify-content-center">
           <button className="btn btn-primary" onClick={showMyLocation}>
-            Locate Me <FontAwesomeIcon icon="globe" />
+            Locate Me
           </button>
         </div>
       </div>

@@ -3,11 +3,20 @@ import React, { Component } from "react";
 class LifeCycle extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: "ali",
+    };
     console.log("constructor run");
   }
 
+  // componentWillMount() {
+  //   console.log("componentDidMount");
+  // }
   componentDidMount() {
     console.log("componentDidMount");
+    this.setState({
+      name: "Murad",
+    });
   }
 
   componentDidUpdate(oldProps, oldState) {
@@ -21,7 +30,13 @@ class LifeCycle extends Component {
 
   render() {
     console.log("render");
-    return <h1>Life Cycle</h1>;
+    return (
+      <div>
+        <h1>Life Cycle</h1>
+        <br />
+        <p>{this.state.name}</p>
+      </div>
+    );
   }
 }
 

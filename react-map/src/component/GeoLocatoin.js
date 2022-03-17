@@ -36,7 +36,7 @@ const UseGeoLocation = () => {
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
   };
-  console.log(location.coordinates);
+  
 
   return <button onClick={allowLocation}>allow</button>;
 };

@@ -1,24 +1,42 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import SimpleMap from "./component/Gmap";
-import UseGeoLocation from "./component/GeoLocatoin";
+// import SimpleMap from "./component/Gmap";
+// import UseGeoLocation from "./component/GeoLocatoin";
 // import { GeoCode } from "./component/GeoCode";
 // import MarkersMap from "./component/LocateMe";
+let autocompleteAddress;
 
 function App() {
+  const [address, setAddress] = useState("");
   let changHandler = (e) => {
-    console.log(e.target.value);
+    setAddress(e.target.value);
+  };
+  console.log(address);
+  useEffect(() => {
+    autocompleteAddress = new window.google.maps.places.Autocomplete(
+      document.getElementById("autocompleteAddress"),
+      { types: ["geocode"] }
+    );
+    autocompleteAddress.addListener("place_changed", () => handlePlaceSelect());
+  }, []);
+
+  const handlePlaceSelect = () => {
+    let addressObject = autocompleteAddress.getPlace();
+    let address = addressObject.formatted_address;
+    setAddress(address);
   };
 
-  const getUserLocation = () => {};
   return (
     <div className="App">
       <input
         type="text"
         placeholder="search a location"
+        value={address}
         onChange={changHandler}
+        id="autocompleteAddress"
       />
-      <SimpleMap />
-      <UseGeoLocation />
+      {/* <SimpleMap /> */}
+      {/* <UseGeoLocation /> */}
       {/* {location.loaded
         ? JSON.stringify(location)
         : "Location data not available yet."} */}

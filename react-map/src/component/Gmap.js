@@ -2,10 +2,15 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import img from "../images/marker.webp";
 
-const AnyReactComponent = ({ text }) => (
+const AnyReactComponent = () => (
   <div style={{ backgroundColor: "white" }}>
     <img src={img} alt="img" width={50} height={50} />
-    <div>{text}</div>
+  </div>
+);
+
+const MarkerInfo = ({ text }) => (
+  <div style={{ backgroundColor: "white", width: "200px" }}>
+    <p>{text}</p>
   </div>
 );
 
@@ -68,13 +73,7 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          {location.loaded && (
-            <AnyReactComponent
-              lat={24.860735}
-              lng={67.001137}
-              text="My Marker"
-            />
-          )}
+          <AnyReactComponent lat={24.860735} lng={67.001137} draggable={true} />
         </GoogleMapReact>
       </div>
     );
