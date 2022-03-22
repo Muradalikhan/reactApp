@@ -12,7 +12,27 @@
   justify-content: center;
   background-color: #eee;
 }
+input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightblue;
+  box-shadow: 10px 10px 20px #aaa;
+}
+button {
+  padding: 10px;
+  border: none;
+  box-shadow: 10px 10px 20px #aaa;
+}
 .redux-comp {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
 }

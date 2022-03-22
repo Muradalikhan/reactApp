@@ -4,6 +4,7 @@ import "./App.css";
 // import UseGeoLocation from "./component/GeoLocatoin";
 // import { GeoCode } from "./component/GeoCode";
 // import MarkersMap from "./component/LocateMe";
+import MapAutoComplete from "./component/AutoCompleteSerach/map";
 let autocompleteAddress;
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
       {/* <GeoCode /> */}
 
       {/* <MarkersMap /> */}
+
+      <MapAutoComplete />
     </div>
   );
 }

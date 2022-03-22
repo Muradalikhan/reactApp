@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addStd } from "../Store/action/stdAction";
+import { addStd, removeStd } from "../Store/action/stdAction";
 
 import "../App.css";
 
@@ -20,12 +20,11 @@ class Students extends Component {
     });
   };
   addtodo = () => {
-    // this.setState({
-    //   stdList: [...this.state.stdList, this.state.newStd],
-    // });
-
     this.props.stdDispatch(this.state.newStd);
     this.setState({ newStd: "" });
+  };
+  deleteStd = (id) => {
+    this.props.stdRemove(id);
   };
   render() {
     const { std } = this.props.std;
@@ -41,10 +40,20 @@ class Students extends Component {
           <button onClick={this.addtodo}>Add</button>
         </div>
         <br />
-        {std}
-        {/* {std.map((std, ind) => {
-          return <p key={ind}>{std}</p>;
-        })} */}
+
+        {std.map((std, ind) => {
+          return (
+            <p key={ind} className="list">
+              <span style={{ flex: 0.6 }}>{std}</span>
+              <span
+                style={{ marginLeft: "59px", flex: 0.4, cursor: "pointer" }}
+                onClick={() => this.deleteStd(ind)}
+              >
+                x
+              </span>
+            </p>
+          );
+        })}
       </div>
     );
   }
@@ -56,6 +65,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   stdDispatch: (std) => dispatch(addStd(std)),
+  stdRemove: (id) => dispatch(removeStd(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Students);
