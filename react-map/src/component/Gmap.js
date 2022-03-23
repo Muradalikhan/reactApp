@@ -15,13 +15,23 @@ const MarkerInfo = ({ text }) => (
 );
 
 class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 24.860735,
-      lng: 67.001137,
-    },
-    zoom: 11,
-  };
+  constructor(props) {
+    super(props);
+    this.marker = "";
+    this.state = {
+      position: {
+        lat: "",
+        lng: "",
+      },
+      zoom: 14,
+    };
+  }
+
+  static getDerivedStateFromProps({ MarkerPosition }, state) {
+    return {
+      position: { lat: MarkerPosition.lat, lng: MarkerPosition.lng },
+    };
+  }
 
   getMapOptions = (maps) => {
     return {
@@ -42,7 +52,7 @@ class SimpleMap extends Component {
       gestureHandling: "greedy",
       disableDoubleClickZoom: true,
       minZoom: 11,
-      maxZoom: 18,
+      maxZoom: 19,
 
       mapTypeControl: true,
       mapTypeId: maps.MapTypeId.SATELLITE,
@@ -60,9 +70,17 @@ class SimpleMap extends Component {
       clickableIcons: true,
     };
   };
+
+  renderMarker(map, maps) {
+    this.marker = new maps.Marker({
+      position: { lat: this.state.position.lat, lng: this.state.position.lng },
+      map,
+      draggable: true,
+    });
+  }
   render() {
+    console.log(this.state);
     return (
-      // Important! Always set the container height explicitly
       <div style={{ height: "50vh", width: "50%" }}>
         <GoogleMapReact
           options={this.getMapOptions}
@@ -70,10 +88,15 @@ class SimpleMap extends Component {
             key: "AIzaSyDvQVehnjgS7mM96rUAPH7zng1Z3ggcZPY",
             // key: "AIzaSyAj-cAEEVHfEJ9arnny-8VT7x4f8f0nIO8",
           }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          center={this.state.position}
+          defaultZoom={this.state.zoom}
+          yesIWantToUseGoogleMapApiInternals
+          onGoogleApiLoaded={({ map, maps }) => this.renderMarker(map, maps)}
         >
-          <AnyReactComponent lat={24.860735} lng={67.001137} draggable={true} />
+          {/* <AnyReactComponent
+            lat={this.state.position.lat}
+            lng={this.state.position.lng}
+          /> */}
         </GoogleMapReact>
       </div>
     );
