@@ -2,6 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // -----------------------------------------------
 import jsPDF from "jspdf";
+import CustomPdfDesign from "./Component/customPdfDesign";
 
 function App() {
   const generatePdf = () => {
@@ -32,7 +33,7 @@ function App() {
     doc.setTextColor("#000");
     doc.setFont("helvetica", "normal");
     doc.setFontSize(12);
-    var line = 25; // Line height to start text at
+    var line = 25;
     var lineHeight = 7;
     var leftMargin = 20;
     var wrapWidth = 180;
@@ -57,6 +58,8 @@ function App() {
       <button className="btn btn-success" onClick={generatePdf}>
         Download pdf
       </button>
+      <div className="m-5"></div>
+      <CustomPdfDesign />
     </div>
   );
 }
