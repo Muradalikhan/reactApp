@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import jsPDF from "jspdf";
-// -----------------------------
+// ------------------------------------------------------
 import { singleLine } from "./customeFunc";
 import { bulletWith2line } from "./customeFunc";
 import { bulletWith1line } from "./customeFunc";
@@ -8,6 +8,7 @@ import { fieldWithLable } from "./customeFunc";
 import { fieldWithLongLable } from "./customeFunc";
 import { ContactfieldWithLable } from "./customeFunc";
 import { FinancialfieldWithLable } from "./customeFunc";
+// ------------------------------------------------------
 
 export default class CustomPdfDesign extends Component {
   generateCustomPdf = () => {
