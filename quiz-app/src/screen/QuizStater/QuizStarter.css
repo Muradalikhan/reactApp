@@ -1,0 +1,25 @@
+.Quiz-Starter {
+  width: 40%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 5px 5px 8px #dadada, -5px -5px 8px #dadada;
+  border-radius: 5px;
+}
+
+@media (max-width: 1400px) {
+  .Quiz-Starter {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Quiz-Starter {
+    width: 60%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Quiz-Starter {
+    width: 80%;
+  }
+}

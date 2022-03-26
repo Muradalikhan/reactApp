@@ -1,0 +1,35 @@
+.quizApp {
+  width: 70%;
+  height: 70vh;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 5px 5px 8px #dadada, -5px -5px 8px #dadada;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: 400px;
+  margin: 0 auto;
+}
+
+.question {
+  height: 30px;
+  margin-bottom: 50px;
+}
+.options div {
+  background-color: #eceff4;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.options div:hover {
+  background-color: #e5e9f0;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+}
