@@ -44,6 +44,10 @@
   align-items: flex-start;
   gap: 10px;
 }
+.para {
+  text-align: justify;
+  letter-spacing: 1.5px;
+}
 .btn {
   padding: 10px;
   background-color: #ffcc00;

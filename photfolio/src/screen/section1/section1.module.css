@@ -83,6 +83,16 @@
   font-weight: 900;
   font-size: 30px;
   color: #ffcc00;
+  cursor: pointer;
+}
+.designation {
+  letter-spacing: 2px;
+  font-family: cursive;
+  font-size: 18px;
+}
+.para {
+  text-align: justify;
+  letter-spacing: 1px;
 }
 .links {
   display: flex;

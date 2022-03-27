@@ -4,7 +4,7 @@ import userImg from "../../images/userImg.png";
 
 function Section2() {
   return (
-    <div className={classes.section2}>
+    <div className={classes.section2} id="sec-2">
       <div className={classes.header}>
         <h2>
           About<span> Us</span>
@@ -23,13 +23,12 @@ function Section2() {
           <h1>
             About<span> Me</span>
           </h1>
-          <p>Hello I'm Murad khan</p>
-          <p>
-            Incididunt occaecat quis esse quis.Esse cillum duis fugiat laboris
-            cillum irure.Lorem velit consequat occaecat et anim proident
-            elit.Irure consectetur enim non labore cupidatat velit dolor est
-            mollit anim non.Id non enim nulla voluptate pariatur cillum occaecat
-            sit.
+          <p className={classes.para}>Hello I'm Murad khan</p>
+          <p className={classes.para}>
+            I'm from Karachi, Pakistan. Since 3 years I’m working as web
+            developer with Company Concept Recall and have developed many
+            website and apart from it I have been part of web design project,
+            office work and as freelancer.
           </p>
           <button className={classes.btn}>Check More</button>
         </div>

@@ -6,15 +6,23 @@ import { useState } from "react";
 function Section1() {
   const [showHead, setShowHead] = useState(false);
   return (
-    <div className={Classes.profile1Section}>
+    <div className={Classes.profile1Section} id="sec-1">
       <div className={showHead ? Classes.showHeader : Classes.header}>
-        <div className={Classes.name}>Portfolio</div>
+        <a className={Classes.name} href="#sec-1">
+          Portfolio
+        </a>
         <div className={Classes.links}>
-          <div className={Classes.link}>Home</div>
-          <div className={Classes.link}>About</div>
-          <div className={Classes.link}>Services</div>
-          <div className={Classes.link}>Skills</div>
-          <div className={Classes.link}>Contact</div>
+          <a className={Classes.link} href="#sec-1">
+            Home
+          </a>
+          <a className={Classes.link} href="#sec-2">
+            About
+          </a>
+          <a className={Classes.link}>Services</a>
+          <a className={Classes.link} href="#sec-3">
+            Skills
+          </a>
+          <a className={Classes.link}>Contact</a>
         </div>
       </div>
       <div
@@ -29,15 +37,14 @@ function Section1() {
         <div className={Classes.introSection}>
           <h1>I AM</h1>
           <h1 className={Classes.userName}>MURAD KHAN</h1>
-          <p>Front end web developer</p>
-          <p>
-            Officia exercitation laboris non velit.Ut velit in eu incididunt
-            anim ex anim ullamco magna dolore eu irure.Excepteur aute dolore
-            enim ex aliquip labore ea est ipsum id laboris proident aliquip
-            quis.Irure veniam in consectetur Lorem qui esse Lorem
-            adipisicing.Est elit consectetur nostrud ex commodo esse ut aliquip
-            reprehenderit ex deserunt.Incididunt anim sunt cupidatat qui anim
-            non dolore non magna ea labore cillum ex.
+          <p className={Classes.designation}>Front end web developer</p>
+          <p className={Classes.para}>
+            Hi There, I’m Front-End Web Developer. It's been 2 years, I’m
+            working as web developer.I have developed many website and also
+            provided my services to college students by getting their projects
+            ready ASAP as a freelancer I have been part of some very good web
+            design projects.I'm also learning Back-End Development and looking
+            forward to be a Full Stack Web Developer.
           </p>
           <button className={Classes.profileBtn}>Download Cv</button>
         </div>
