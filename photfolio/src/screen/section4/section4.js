@@ -4,12 +4,18 @@ import classes from "./section4.module.css";
 
 export default function Section4() {
   return (
-    <div className={classes.section3}>
+    <div className={classes.section4}>
       <div className={classes.header}>
-        <p>header</p>
-        <p>headerasdasdddddddd</p>
+        <h2>
+          My <span>Projects</span>
+        </h2>
+        <p>below are my best projects</p>
       </div>
       <div className={classes.Content}>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
         <ProjectCard />
       </div>
     </div>
