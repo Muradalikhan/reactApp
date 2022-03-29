@@ -11,8 +11,8 @@ const Result = ({
   backToQuiz,
   EndQuiz,
   userAns,
+  DownloadCertificate,
 }) => {
-  console.log(score);
   return (
     <div className="result">
       <div className="left">
@@ -30,11 +30,14 @@ const Result = ({
           {info.name} your score is {score} and percentage is{" "}
           {ScorePercentage.toFixed(2)}%
         </h4>
-        <button className="App-btn mx-3" onClick={backToQuiz}>
+        <button className="App-btn mx-2" onClick={backToQuiz}>
           Back to quiz
         </button>
-        <button className="App-btn" onClick={EndQuiz}>
+        <button className="App-btn mx-2" onClick={EndQuiz}>
           End Session
+        </button>
+        <button className="App-btn-long" onClick={DownloadCertificate}>
+          Download your Certificate
         </button>
       </div>
       <div className="right">
