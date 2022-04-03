@@ -6,6 +6,8 @@ import CustomPdfDesign from "./Component/pdf/customPdfDesign";
 import HelloZip from "./Component/zip/helloZip";
 import Sample from "./Component/pdf/sample";
 import Input from "./Component/input/Input";
+import TextEditor from "./Component/Editor/EditorInput";
+import TextEditor2 from "./Component/TextEditor/TextEditor";
 // -----------------------------------------------
 
 function App() {
@@ -19,6 +21,10 @@ function App() {
       <HelloZip />
       <div className="m-5"></div>
       <Input />
+      <div className="m-5"></div>
+      <TextEditor/>
+      <div className="m-5"></div>
+      <TextEditor2/>
     </div>
   );
 }

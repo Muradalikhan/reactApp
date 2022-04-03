@@ -1,0 +1,43 @@
+.QuizCeritificate {
+  width: 70%;
+  height: 70vh;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 5px 5px 8px #dadada, -5px -5px 8px #dadada;
+  padding: 20px;
+  /* background-image: url("../../asset/images/template.png"); */
+  /* background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%; */
+}
+.c-border {
+  border: 3px dashed #ff5e5b;
+  border-radius: 5px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.c-header {
+  padding-bottom: 20px;
+  border-bottom: 5px solid #ff5e5b;
+  display: inline-block;
+}
+.c-name {
+  font-size: 40px;
+  font-family: cursive;
+  font-style: italic;
+}
+.c-para {
+  letter-spacing: 1.2px;
+}
+.c-per {
+  font-weight: bold;
+}
+.c-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 300px;
+}

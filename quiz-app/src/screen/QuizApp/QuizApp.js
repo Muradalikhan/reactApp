@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import img from "../../asset/images/quizImg.jpg";
-import Congrtas from "../../asset/images/congrats.jpg";
-import tryAgain from "../../asset/images/try again.jpg";
 import "./QuizApp.css";
 import { javascript, react, typecript } from "./data";
+import Result from "../QuizResult/Result";
+import QuizCeritificate from "../QuizCeritificate/QuizCeritificate";
 
 let timerId;
 
@@ -12,7 +11,9 @@ const QuizApp = ({ info, setStart }) => {
   const [score, setScore] = useState(0);
   const [timeCounter, setTimeCounter] = useState(10);
   const [quiz, setQuiz] = useState([]);
+  const [userAns, setUserAns] = useState([]);
   const [quizComplete, setQuizComplete] = useState(false);
+  const [certificateScree, setCertificateScree] = useState(false);
 
   const questionLimit = Number(info.questionNo);
   const ScorePercentage = (score / questionLimit) * 100;
@@ -31,6 +32,10 @@ const QuizApp = ({ info, setStart }) => {
       timerId = setTimeout(() => {
         setTimeCounter(timeCounter - 1);
         if (timeCounter === 1) {
+          setUserAns([
+            ...userAns,
+            { selectAns: "Time Out", CorrectAns: "not select" },
+          ]);
           if (index < questionLimit - 1) {
             setIndex(index + 1);
           } else {
@@ -50,10 +55,11 @@ const QuizApp = ({ info, setStart }) => {
     }
   }, [index, timeCounter]);
 
-  let selectAns = (selectAns, ans) => {
+  let selectAns = (selectAns, CorrectAns) => {
+    setUserAns([...userAns, { selectAns, CorrectAns }]);
+    if (selectAns === CorrectAns) setScore((prevscore) => ++prevscore);
     if (index < questionLimit - 1) {
       clearInterval(timerId);
-      if (selectAns === ans) setScore(score + 1);
       setIndex(index + 1);
       setTimeCounter(10);
     } else {
@@ -62,17 +68,25 @@ const QuizApp = ({ info, setStart }) => {
   };
 
   let backToQuiz = () => {
+    setUserAns([]);
+    setTimeCounter(10);
     setScore(0);
     setIndex(0);
     setQuizComplete(false);
   };
 
   let EndQuiz = () => {
+    setUserAns([]);
+    setTimeCounter(10);
     setScore(0);
     setStart(false);
     setQuizComplete(false);
   };
-  return (
+
+  let DownloadCertificate = () => {
+    setCertificateScree(true);
+  };
+  return !certificateScree ? (
     <div className="quizApp">
       <div>
         <h3>{info.language} Quiz</h3>
@@ -105,30 +119,19 @@ const QuizApp = ({ info, setStart }) => {
           );
         })
       ) : (
-        <div>
-          <div>
-            <img src={img} alt="img" className="w-25" />
-          </div>
-          <div>
-            {ScorePercentage >= 60 ? (
-              <img src={Congrtas} alt="img" className="w-25" />
-            ) : (
-              <img src={tryAgain} alt="img" className="w-25" />
-            )}
-          </div>
-          <h4 className="m-5">
-            {info.name} your score is {score} and percentage is{" "}
-            {ScorePercentage.toFixed(2)}%
-          </h4>
-          <button className="App-btn mx-3" onClick={backToQuiz}>
-            Back to quiz
-          </button>
-          <button className="App-btn" onClick={EndQuiz}>
-            End Session
-          </button>
-        </div>
+        <Result
+          score={score}
+          ScorePercentage={ScorePercentage}
+          info={info}
+          backToQuiz={backToQuiz}
+          EndQuiz={EndQuiz}
+          userAns={userAns}
+          DownloadCertificate={DownloadCertificate}
+        />
       )}
     </div>
+  ) : (
+    <QuizCeritificate info={info} ScorePercentage={ScorePercentage} />
   );
 };
 
