@@ -1,0 +1,17 @@
+start with backend follow these step
+
+create server folder
+open cmd in server folder directory
+npm init
+press enter until pakage.json file is created
+goto pakage.json
+after "main":"index.js" add this
+"type":"module",
+then install these in server folder
+npm i bcryptjs cors express jsonwebtoken mongoose morgan
+npm i nodemon --save-dev
+create file index.js
+add in pakage.json
+"dev":"nodemon index.js"
+
+and run cmd=> npm run dev
