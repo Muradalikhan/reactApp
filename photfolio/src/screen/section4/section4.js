@@ -5,9 +5,24 @@ import classes from "./section4.module.css";
 export default function Section4() {
   const myRef = useRef();
 
-  const doScroll = () => {
-    myRef.scrollBy(30, 0);
+  var left = 0;
+
+  const handleScroll = ({ target }) => {
+    if (target.hasAttribute(myRef.scrollBack)) {
+      left = left - 100;
+      myRef.scrollTo({
+        left: left - 100,
+        behavior: "smooth",
+      });
+    } else {
+      left = left + 100;
+      myRef.scrollTo({
+        left: left + 100,
+        behavior: "smooth",
+      });
+    }
   };
+
   return (
     <div className={classes.section4}>
       <div className={classes.header}>
@@ -28,7 +43,7 @@ export default function Section4() {
           <ProjectCard />
         </div>
         <div style={{ flex1: 0.1 }}>
-          <i className="fa fa-arrow-right" onClick={doScroll}></i>
+          <i className="fa fa-arrow-right" onClick={handleScroll}></i>
         </div>
       </div>
     </div>

@@ -92,7 +92,7 @@
 }
 .para {
   text-align: justify;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 .links {
   display: flex;
