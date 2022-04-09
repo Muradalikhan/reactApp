@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -21,12 +21,19 @@ const intialValue = {
 const Login = () => {
   const [formVal, setFormVal] = useState(intialValue);
   const { email, password } = formVal;
+
+  const { loading, error } = useSelector((state) => ({ ...state.auth }));
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setFormVal({ ...formVal, [name]: value });
   };
+
+  useEffect(() => {
+    error && toast.error(error);
+  }, [error]);
   const submitHandler = (e) => {
     e.preventDefault();
     if (email && password) {
@@ -81,6 +88,14 @@ const Login = () => {
             </div>
             <div className="col-md-12">
               <MDBBtn style={{ width: "100%" }} className="mt-2" size="lg">
+                {loading && (
+                  <MDBSpinner
+                    role="status"
+                    size="sm"
+                    tag="span"
+                    className="me-2"
+                  />
+                )}
                 Login
               </MDBBtn>
             </div>

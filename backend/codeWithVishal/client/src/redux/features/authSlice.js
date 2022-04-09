@@ -3,14 +3,14 @@ import * as api from "../api";
 
 export const login = createAsyncThunk(
   "auth/login",
-  async ({ formVal, toast, navigate }) => {
+  async ({ formVal, toast, navigate },{rejectWithValue}) => {
     try {
       const response = await api.signIn(formVal);
       toast.success("Login successfully");
       navigate("/");
       return response.data;
     } catch (err) {
-      console.log(err);
+      return rejectWithValue(err.response.data)
     }
   }
 );
