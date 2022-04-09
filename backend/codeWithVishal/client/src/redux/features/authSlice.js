@@ -14,12 +14,27 @@ export const login = createAsyncThunk(
     }
   }
 );
+
 export const register = createAsyncThunk(
   "auth/register",
   async ({ formVal, toast, navigate }, { rejectWithValue }) => {
     try {
       const response = await api.signUp(formVal);
       toast.success("Register successfully");
+      navigate("/");
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
+export const googleSignIn = createAsyncThunk(
+  "auth/googleSignIn",
+  async ({ result, toast, navigate }, { rejectWithValue }) => {
+    try {
+      const response = await api.googleSignIn(result);
+      toast.success("Google SignIn successfully");
       navigate("/");
       return response.data;
     } catch (err) {
@@ -57,6 +72,18 @@ const AuthSlice = createSlice({
       state.user = action.payload;
     },
     [register.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = action.payload.message;
+    },
+    [googleSignIn.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [googleSignIn.fulfilled]: (state, action) => {
+      state.loading = false;
+      localStorage.setItem("profile", JSON.stringify({ ...action.payload }));
+      state.user = action.payload;
+    },
+    [googleSignIn.rejected]: (state, action) => {
       state.loading = false;
       state.error = action.payload.message;
     },

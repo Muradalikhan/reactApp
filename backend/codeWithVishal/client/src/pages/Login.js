@@ -11,8 +11,9 @@ import {
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/features/authSlice";
+import { googleSignIn, login } from "../redux/features/authSlice";
 import { toast } from "react-toastify";
+import GoogleLogin from "react-google-login";
 
 const intialValue = {
   email: "",
@@ -39,6 +40,18 @@ const Login = () => {
     if (email && password) {
       dispatch(login({ formVal, toast, navigate }));
     }
+  };
+
+  const googleSuccess = (resp) => {
+    const email = resp?.profileObj?.email;
+    const name = resp?.profileObj?.name;
+    const token = resp?.tokenId;
+    const googleId = resp?.googleId;
+    const result = { email, name, token, googleId };
+    dispatch(googleSignIn({ result, navigate, toast }));
+  };
+  const googleFailure = (error) => {
+    toast.error(error);
   };
   return (
     <div
@@ -100,7 +113,25 @@ const Login = () => {
               </MDBBtn>
             </div>
           </MDBValidation>
-          <br/>
+          <br />
+          <GoogleLogin
+            clientId="177884607149-i2sm9dulji6u4orpjp6qbaj8vlrm0f5l.apps.googleusercontent.com"
+            render={(renderProps) => (
+              <MDBBtn
+                style={{ width: "100%" }}
+                color="danger"
+                size="lg"
+                onClick={renderProps.onClick}
+                disabled={renderProps.disabled}
+              >
+                <MDBIcon className="me-2" fab icon="google" />
+                Login with Google
+              </MDBBtn>
+            )}
+            onSuccess={googleSuccess}
+            onFailure={googleFailure}
+            cookiePolicy="single_host_origin"
+          />
           <MDBCardFooter>
             <Link to="/register">Don't have account? Signup</Link>
           </MDBCardFooter>
