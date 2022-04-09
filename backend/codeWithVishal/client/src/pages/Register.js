@@ -11,7 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/features/authSlice";
+import { register } from "../redux/features/authSlice";
 import { toast } from "react-toastify";
 
 const intialValue = {
@@ -39,9 +39,11 @@ const Register = () => {
   }, [error]);
   const submitHandler = (e) => {
     e.preventDefault();
-    // if (email && password) {
-    //   dispatch(Register({ formVal, toast, navigate }));
-    // }
+    if (password !== confirmPassword) {
+      toast.error("password should match");
+    } else if (email && password && firstName && lastName && confirmPassword) {
+      dispatch(register({ formVal, toast, navigate }));
+    }
   };
   return (
     <div

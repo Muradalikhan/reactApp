@@ -100,6 +100,7 @@ const Login = () => {
               </MDBBtn>
             </div>
           </MDBValidation>
+          <br/>
           <MDBCardFooter>
             <Link to="/register">Don't have account? Signup</Link>
           </MDBCardFooter>
