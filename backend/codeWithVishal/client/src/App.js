@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setUser } from "./redux/features/authSlice";
+import AddEditTour from "./pages/AddEditTour";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -24,6 +25,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/addTour" element={<AddEditTour />} />
+          <Route path="/addTour/:id" element={<AddEditTour />} />
         </Routes>
       </div>
     </BrowserRouter>
