@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -12,6 +12,8 @@ import ChipInput from "material-ui-chip-input";
 import FileBase from "react-file-base64";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { createTour } from "../redux/features/tourSlice";
 
 const intialValue = {
   title: "",
@@ -21,9 +23,22 @@ const intialValue = {
 const AddEditTour = () => {
   const [tourData, setTourData] = useState(intialValue);
   const { title, description, tags } = tourData;
+  const { error, loading } = useSelector((state) => ({ ...state.tour }));
+  const { user } = useSelector((state) => ({ ...state.auth }));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    error && toast.error(error);
+  }, [error]);
 
   const handleSubmit = (e) => {
-    e.preventDeault();
+    e.preventDefault();
+    if (title && description && tags) {
+      const updatedTour = { ...tourData, name: user?.result.name };
+      dispatch(createTour({ updatedTour, navigate, toast }));
+      handleClear();
+    }
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -105,7 +120,7 @@ const AddEditTour = () => {
               <MDBBtn
                 style={{ width: "100%" }}
                 className="mt-2"
-                onClick={handleSubmit}
+                type="submit"
                 size="lg"
               >
                 Submit
