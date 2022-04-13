@@ -58,8 +58,9 @@ export const googleSignIn = async (req, res) => {
   const { name, email, token, googleId } = req.body;
   try {
     const oldUser = await UserModel.findOne({ email });
+    console.log("oldUser==>", oldUser);
     if (oldUser) {
-      const result = { _id: oldUser._id.toSting(), email, name };
+      const result = { _id: oldUser._id.toString(), email, name };
       return res.status(200).json({ result, token });
     }
 
@@ -68,11 +69,9 @@ export const googleSignIn = async (req, res) => {
       email,
       googleId,
     });
-    res.status(200).json({result,token})
-  } catch(err) {
+    res.status(200).json({ result, token });
+  } catch (err) {
     res.status(500).json({ message: "something went wrong" });
     console.log(err);
-
-
   }
 };

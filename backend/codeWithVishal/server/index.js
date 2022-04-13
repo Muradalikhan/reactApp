@@ -16,7 +16,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use("/users", userRouter); // http://localhost:5000/users/signup
-app.use("/tours", tourRouter); // http://localhost:5000/tours/
+app.use("/tours", tourRouter); // http://localhost:5000/tours/tour
 
 const MONGODB_URL =
   "mongodb+srv://murad:yX6f3XT0fDOgyrpL@cluster0.8xlrx.mongodb.net/myDb?retryWrites=true&w=majority";
@@ -26,6 +26,6 @@ const port = 5000;
 mongoose
   .connect(MONGODB_URL)
   .then(() => {
-    app.listen(port, () => console.log("server is running on ",port));
+    app.listen(port, () => console.log("server is running on ", port));
   })
   .catch((error) => console.log(error));

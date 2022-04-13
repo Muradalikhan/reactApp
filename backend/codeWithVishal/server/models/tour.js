@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const tourSchema = mongoose.Schema({
   title: String,
   name: String,
-  discription: String,
+  creator: String,
+  description: String,
   tags: [String],
   imageFile: String,
   likeCount: {
