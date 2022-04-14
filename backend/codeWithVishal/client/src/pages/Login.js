@@ -62,7 +62,7 @@ const Login = () => {
         marginTop: "50px",
       }}
     >
-      <MDBCard alignment="center">
+      <MDBCard alignment="center" className="p-5">
         <MDBIcon fas icon="user-circle" className="fa-2x" />
         <h4>Sign In</h4>
         <MDBCardBody>
