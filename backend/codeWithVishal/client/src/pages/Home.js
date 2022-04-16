@@ -31,7 +31,6 @@ const Home = () => {
         <MDBRow>
           {tours &&
             tours.map((item, index) => <TourCard key={index} {...item} />)}
-          {console.log(tours)}
         </MDBRow>
       </MDBContainer>
     </div>

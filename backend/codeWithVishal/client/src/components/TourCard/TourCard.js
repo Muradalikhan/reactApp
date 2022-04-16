@@ -8,8 +8,13 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
+import { useNavigate } from "react-router-dom";
 
-export const TourCard = ({ title, name, description, imageFile }) => {
+export const TourCard = ({ title, name, description, imageFile, _id }) => {
+  const navigate = useNavigate();
+  const goToDetail = (id) => {
+    navigate(`/singleTour/${id}`);
+  };
   return (
     <MDBCard style={{ maxWidth: "22rem", margin: "20px", padding: "15px" }}>
       <MDBRipple
@@ -33,7 +38,7 @@ export const TourCard = ({ title, name, description, imageFile }) => {
       <MDBCardBody>
         <MDBCardTitle>{title}</MDBCardTitle>
         <MDBCardText>{description}</MDBCardText>
-        <MDBBtn href="#">View Details</MDBBtn>
+        <MDBBtn onClick={() => goToDetail(_id)}>View Details</MDBBtn>
       </MDBCardBody>
     </MDBCard>
   );
