@@ -25,7 +25,7 @@ export const getTours = async (req, res) => {
 };
 
 export const getTour = async (req, res) => {
-  const { id } = req.param;
+  const { id } = req.params;
   try {
     const tour = await TourModal.findById(id);
     res.status(200).json(tour);
