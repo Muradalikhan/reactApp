@@ -1,0 +1,8 @@
+.name {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 4px 4px 8px #eee;
+}

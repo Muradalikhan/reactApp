@@ -5,14 +5,16 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardImage,
+  MDBSpinner,
 } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getTour } from "../redux/features/tourSlice";
+import moment from "moment";
 
 const SingleTour = () => {
   const dispatch = useDispatch();
-  const { tour } = useSelector((state) => state.tour);
+  const { tour, loading } = useSelector((state) => state.tour);
   const { id } = useParams();
   useEffect(() => {
     if (id) {
@@ -20,22 +22,37 @@ const SingleTour = () => {
     }
   }, [id]);
 
-  console.log(tour);
   return (
     <>
-      <MDBCard className="mb-3">
-        <MDBCardImage position="top" src={tour?.imageFile} alt="img" />
-        <MDBCardBody>
-          <MDBCardTitle>Card title</MDBCardTitle>
-          <MDBCardText>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </MDBCardText>
-          <MDBCardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </MDBCardText>
-        </MDBCardBody>
-      </MDBCard>
+      {loading ? (
+        <MDBSpinner className="mt-5" />
+      ) : (
+        <MDBCard className="mb-3">
+          <MDBCardImage
+            position="top"
+            src={tour?.imageFile}
+            alt="img"
+            height={450}
+          />
+          <MDBCardBody>
+            <MDBCardTitle>{tour?.title}</MDBCardTitle>
+            <div className="d-flex justify-content-center">
+              {tour?.tags?.map((tag) => (
+                <MDBCardText className="px-2 fw-bold">#{tag}</MDBCardText>
+              ))}
+            </div>
+            <MDBCardText>{tour?.description}</MDBCardText>
+            <MDBCardText>
+              <small className="text-muted">
+                created {moment(tour?.createdAt).fromNow()}
+              </small>
+            </MDBCardText>
+            <MDBCardText className="align-self-right">
+              Author : {tour?.name}
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      )}
     </>
   );
 };

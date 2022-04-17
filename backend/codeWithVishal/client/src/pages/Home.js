@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { MDBContainer, MDBCol, MDBRow, MDBTypography } from "mdb-react-ui-kit";
+import {
+  MDBContainer,
+  MDBCol,
+  MDBRow,
+  MDBTypography,
+  MDBSpinner,
+} from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getTours } from "../redux/features/tourSlice";
@@ -14,7 +20,7 @@ const Home = () => {
   }, []);
 
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <MDBSpinner className="mt-5" />;
   }
   return (
     <div
@@ -22,7 +28,7 @@ const Home = () => {
         alignContent: "center",
         margin: "auto",
         padding: "15px",
-        maxWidth: "1000px",
+        maxWidth: "90%",
       }}
     >
       <MDBContainer>
@@ -30,7 +36,11 @@ const Home = () => {
 
         <MDBRow>
           {tours &&
-            tours.map((item, index) => <TourCard key={index} {...item} />)}
+            tours.map((item, index) => (
+              <MDBCol>
+                <TourCard key={index} {...item} />
+              </MDBCol>
+            ))}
         </MDBRow>
       </MDBContainer>
     </div>

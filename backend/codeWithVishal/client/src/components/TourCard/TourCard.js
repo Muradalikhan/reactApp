@@ -8,6 +8,7 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
+import "./TourCard.css";
 import { useNavigate } from "react-router-dom";
 
 export const TourCard = ({ title, name, description, imageFile, _id }) => {
@@ -34,10 +35,15 @@ export const TourCard = ({ title, name, description, imageFile, _id }) => {
             style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
           ></div>
         </a>
+        <div className="name">{name}</div>
       </MDBRipple>
       <MDBCardBody>
         <MDBCardTitle>{title}</MDBCardTitle>
-        <MDBCardText>{description}</MDBCardText>
+        <MDBCardText>
+          {description.length > 45
+            ? description.slice(0, 45) + "..."
+            : description}
+        </MDBCardText>
         <MDBBtn onClick={() => goToDetail(_id)}>View Details</MDBBtn>
       </MDBCardBody>
     </MDBCard>
