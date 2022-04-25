@@ -1,13 +1,6 @@
 import React, { useEffect } from "react";
-import {
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBTypography,
-  MDBSpinner,
-} from "mdb-react-ui-kit";
+import { MDBContainer, MDBCol, MDBRow, MDBSpinner } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { getTours } from "../redux/features/tourSlice";
 import { TourCard } from "../components/TourCard/TourCard";
 
