@@ -16,3 +16,5 @@ export const googleSignIn = (result) => API.post("/users/googleSignIn", result);
 export const createTour = (tourData) => API.post("/tours/tour", tourData);
 export const getTours = () => API.get("/tours/tour");
 export const getTour = (id) => API.get(`/tours/tour/${id}`);
+export const getTourByUserId = (userId) =>
+  API.get(`/tours/tour/userTours/${userId}`);
