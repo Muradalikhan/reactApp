@@ -13,6 +13,7 @@ import AddEditTour from "./pages/AddEditTour";
 import SingleTour from "./pages/singleTour";
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/404page";
+import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -26,11 +27,32 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoutes>
+                <Dashboard />
+              </ProtectedRoutes>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/addTour" element={<AddEditTour />} />
-          <Route path="/editTour/:id" element={<AddEditTour />} />
+          <Route
+            path="/addTour"
+            element={
+              <ProtectedRoutes>
+                <AddEditTour />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/editTour/:id"
+            element={
+              <ProtectedRoutes>
+                <AddEditTour />
+              </ProtectedRoutes>
+            }
+          />
           <Route path="/singleTour/:id" element={<SingleTour />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
