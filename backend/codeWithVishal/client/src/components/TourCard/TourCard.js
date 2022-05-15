@@ -34,7 +34,14 @@ export const TourCard = ({ title, name, description, imageFile, _id }) => {
   };
   const goToDelete = (id) => {};
   return (
-    <MDBCard style={{ maxWidth: "22rem", margin: "20px", padding: "15px" }}>
+    <MDBCard
+      style={{
+        minWidth: "22rem",
+        maxWidth: "22rem",
+        margin: "20px",
+        padding: "15px",
+      }}
+    >
       <MDBRipple
         rippleColor="light"
         rippleTag="div"
