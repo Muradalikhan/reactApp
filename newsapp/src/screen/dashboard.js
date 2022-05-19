@@ -15,8 +15,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import { FiberNew } from "@mui/icons-material";
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 import MyCard from "../component/card";
 import TextField from "@mui/material/TextField";
 import ApiKey from "../config/config";
@@ -213,23 +212,12 @@ export default function Dashboard() {
           {sources.map((text, index) => (
             <ListItem button key={index}>
               <ListItemIcon>
-                <InboxIcon />
+                <NewspaperIcon />
               </ListItemIcon>
               <ListItemText
                 primary={text.name}
                 onClick={() => showNews(text.id)}
               />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                <FiberNew />
-              </ListItemIcon>
-              <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
