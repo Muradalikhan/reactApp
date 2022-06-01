@@ -30,17 +30,17 @@ const Result = ({
           {info.name} your score is {score} and percentage is{" "}
           {ScorePercentage.toFixed(2)}%
         </h4>
-        <button className="App-btn mx-2" onClick={backToQuiz}>
+        <button className="App-btn mx-2 btnShadow" onClick={backToQuiz}>
           Back to quiz
         </button>
-        <button className="App-btn mx-2" onClick={EndQuiz}>
+        <button className="App-btn mx-2 btnShadow" onClick={EndQuiz}>
           End Session
         </button>
-        <button className="App-btn-long" onClick={DownloadCertificate}>
+        <button className="App-btn-long btnShadow" onClick={DownloadCertificate}>
           Download your Certificate
         </button>
       </div>
-      <div className="right">
+      <div className="right innerShadow p-3">
         <h3 className="summary">Check Answers</h3>
         <div className="ans-list">
           <div className="list-item">
