@@ -87,7 +87,7 @@ const QuizApp = ({ info, setStart }) => {
     setCertificateScree(true);
   };
   return !certificateScree ? (
-    <div className="quizApp">
+    <div className="quizApp container">
       <div>
         <h3>{info.language} Quiz</h3>
         <div>
@@ -105,12 +105,13 @@ const QuizApp = ({ info, setStart }) => {
                 <div className="options">
                   {ques.option.map((option, key) => {
                     return (
-                      <div
+                      <button
                         key={key}
                         onClick={() => selectAns(option, ques.answer)}
+                        className='App-btn btnShadow w-100 my-2'
                       >
                         {option}
-                      </div>
+                      </button>
                     );
                   })}
                 </div>
