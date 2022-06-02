@@ -1,9 +1,6 @@
 .quizApp {
   width: 70%;
   height: 70vh;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 5px 5px 8px #dadada, -5px -5px 8px #dadada;
   padding: 20px;
   text-align: center;
   display: flex;
