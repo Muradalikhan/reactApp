@@ -1,7 +1,7 @@
 import React from "react";
-import img from "../../asset/images/quizImg.jpg";
-import Congrtas from "../../asset/images/congrats.jpg";
-import tryAgain from "../../asset/images/try again.jpg";
+import img from "../../asset/images/quizImg.png";
+import Congrtas from "../../asset/images/congrats.png";
+import tryAgain from "../../asset/images/try_again.png";
 import "./Result.css";
 
 const Result = ({
@@ -17,13 +17,13 @@ const Result = ({
     <div className="result">
       <div className="left">
         <div>
-          <img src={img} alt="img" className="w-25" />
+          <img src={img} alt="img" className="w-50 rounded-3 pb-3" />
         </div>
         <div>
           {ScorePercentage >= 60 ? (
-            <img src={Congrtas} alt="img" className="w-25" />
+            <img src={Congrtas} alt="img" className="w-50" />
           ) : (
-            <img src={tryAgain} alt="img" className="w-25" />
+            <img src={tryAgain} alt="img" className="w-25 rounded" />
           )}
         </div>
         <h4 className="m-5">
