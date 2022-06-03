@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./QuizStarter.css";
-import Img from "../../asset/images/quizImg.jpg";
+import Img from "../../asset/images/quizImg.png";
 import QuizApp from "../QuizApp/QuizApp";
 import "../../App.css";
 
@@ -34,9 +34,9 @@ const QuizStarter = () => {
   return !start ? (
     <div className="Quiz-Starter">
       <h3>Set up your Quiz</h3>
-      <div className="p-3 innerShadow">
-        <div className="my-3 ">
-          <img src={Img} alt="img" className="w-100 borderRadius" />
+      <div className="innerShadow">
+        <div >
+          <img src={Img} alt="img" className="w-75 borderRadius" />
         </div>
       </div>
       <div className="innerShadow my-4">
