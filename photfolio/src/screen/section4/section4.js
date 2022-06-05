@@ -43,10 +43,6 @@ export default function Section4() {
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
         </div>
         <div style={{ flex1: 0.1 }} onClick={handleScrollRight}>
           <i className="fa fa-arrow-right"></i>

@@ -31,7 +31,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 @media only screen and (max-width: 900px) {
   .section3 {
