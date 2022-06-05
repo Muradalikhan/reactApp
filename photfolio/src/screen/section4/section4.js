@@ -7,24 +7,25 @@ export default function Section4() {
 
   var left = 0;
 
-  const handleScroll = ({ target }) => {
-    if (target.hasAttribute(myRef.scrollBack)) {
-      left = left - 100;
-      myRef.scrollTo({
-        left: left - 100,
-        behavior: "smooth",
-      });
-    } else {
-      left = left + 100;
-      myRef.scrollTo({
-        left: left + 100,
+  const handleScrollRight = () => {
+    left = left + 500;
+    myRef.current.scrollTo({
+      left: left,
+      behavior: "smooth",
+    });
+  };
+  const handleScrollLeft = () => {
+    if (left > 0) {
+      left = left - 500;
+      myRef.current.scrollTo({
+        left: left,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className={classes.section4}>
+    <div className={classes.section4} id="sec-4">
       <div className={classes.header}>
         <h2>
           My <span>Projects</span>
@@ -32,7 +33,7 @@ export default function Section4() {
         <p>below are my best projects</p>
       </div>
       <div className={classes.Content}>
-        <div style={{ flex1: 0.1 }}>
+        <div style={{ flex1: 0.1 }} onClick={handleScrollLeft}>
           <i className="fa fa-arrow-left"></i>
         </div>
         <div className={classes.Projects} style={{ flex1: 0.7 }} ref={myRef}>
@@ -41,9 +42,14 @@ export default function Section4() {
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
-        <div style={{ flex1: 0.1 }}>
-          <i className="fa fa-arrow-right" onClick={handleScroll}></i>
+        <div style={{ flex1: 0.1 }} onClick={handleScrollRight}>
+          <i className="fa fa-arrow-right"></i>
         </div>
       </div>
     </div>
