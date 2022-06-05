@@ -27,7 +27,8 @@
 .Projects {
   display: flex;
   height: auto;
-  justify-content: center;
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
   overflow-x: scroll;
