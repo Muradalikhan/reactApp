@@ -2,7 +2,13 @@ import Classes from "./section1.module.css";
 import bgColor from "../../images/background-blob.svg";
 import UserImg from "../../images/userImg.png";
 import { useState } from "react";
-
+import { IconButton } from "@mui/material";
+//icons
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import ArticleIcon from "@mui/icons-material/Article";
 function Section1() {
   const [showHead, setShowHead] = useState(false);
   return (
@@ -18,9 +24,11 @@ function Section1() {
           <a className={Classes.link} href="#sec-2">
             About
           </a>
-          <a className={Classes.link}>Services</a>
           <a className={Classes.link} href="#sec-3">
             Skills
+          </a>
+          <a className={Classes.link} href="#sec-4">
+            Projects
           </a>
           <a className={Classes.link}>Contact</a>
         </div>
@@ -47,6 +55,36 @@ function Section1() {
             forward to be a Full Stack Web Developer.
           </p>
           <button className={Classes.profileBtn}>Download Cv</button>
+          <div>
+            <IconButton>
+              <a href="https://github.com/muradalikhan" target="_blank">
+                <GitHubIcon sx={{ color: "#fff" }} />
+              </a>
+            </IconButton>
+            <IconButton>
+              <a
+                href="https://www.linkedin.com/in/murad-khan-dev/"
+                target="_blank"
+              >
+                <LinkedInIcon sx={{ color: "#fff" }} />{" "}
+              </a>
+            </IconButton>
+            <IconButton>
+              <a href="https://twitter.com/MuradKh53217145" target="_blank">
+                <TwitterIcon sx={{ color: "#fff" }} />
+              </a>
+            </IconButton>
+            <IconButton>
+              <a href="https://web.facebook.com/murad.khan.8/" target="_blank">
+                <FacebookIcon sx={{ color: "#fff" }} />
+              </a>
+            </IconButton>
+            <IconButton>
+              <a href="https://medium.com/@murad.jaddoon/" target="_blank">
+                <ArticleIcon sx={{ color: "#fff" }} />
+              </a>
+            </IconButton>
+          </div>
         </div>
       </div>
     </div>
