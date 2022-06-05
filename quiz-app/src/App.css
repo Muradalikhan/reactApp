@@ -1,21 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style-type: none;
+  font-family: 'Baloo Bhai 2';
 }
 .App {
   text-align: center;
   width: 100%;
   height: 100vh;
-  background-color: #eceff4;
+  background-color: #e0e0e0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.container {
+  border-radius: 28px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bababa, -5px -5px 10px #ffffff;
+}
+.innerShadow {
+  border-radius: 28px;
+  background: #e0e0e0;
+  box-shadow: inset 7px 7px 9px #cacaca, inset -7px -7px 9px #f6f6f6;
+}
+.btnShadow {
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ff6561, #e65552);
+  box-shadow: 6px 6px 12px #adaaaa, -6px -6px 12px #ffffff;
+}
+.input {
+  background: none;
+  border: none;
+  width: 100%;
+  outline: none;
+}
 .App-btn {
   background-color: #ff5e5b;
   border: none;
@@ -23,23 +45,18 @@
   letter-spacing: 2px;
   font-size: 14px;
   color: #fff;
-  box-shadow: 4ppx 4px 8px #b4b0b0;
   padding: 10px;
-  border-radius: 5px;
 }
 .App-btn:hover {
   background-color: #f15025;
 }
 
 .App-btn-long {
-  background-color: #ff5e5b;
   border: none;
   font-weight: 400px;
   letter-spacing: 2px;
   font-size: 14px;
   color: #fff;
-  box-shadow: 4ppx 4px 8px #b4b0b0;
   padding: 10px 20px;
-  border-radius: 5px;
   margin: 20px;
 }

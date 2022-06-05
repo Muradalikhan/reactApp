@@ -1,11 +1,13 @@
 .Quiz-Starter {
   width: 40%;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 5px 5px 8px #dadada, -5px -5px 8px #dadada;
-  border-radius: 5px;
+  border-radius: 28px;
+  background: #e0e0e0;
+  box-shadow: 28px 28px 38px #c7c7c7, -28px -28px 38px #f9f9f9;
 }
-
+.borderRadius {
+  border-radius: 28px;
+}
 @media (max-width: 1400px) {
   .Quiz-Starter {
     width: 50%;

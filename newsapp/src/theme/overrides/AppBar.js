@@ -5,7 +5,7 @@ export default function AppBar(theme) {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor:'transparent',
+          backgroundColor:'primary.main',
           boxShadow:'none',
         }
       }

@@ -18,7 +18,7 @@ function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
-const FONT_PRIMARY = 'Roboto';
+const FONT_PRIMARY = 'Nunito';
 
 const typography = {
   fontFamily: FONT_PRIMARY,

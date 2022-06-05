@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./QuizStarter.css";
-import Img from "../../asset/images/quizImg.jpg";
+import Img from "../../asset/images/quizImg.png";
 import QuizApp from "../QuizApp/QuizApp";
+import "../../App.css";
 
 const QuizStarter = () => {
   const [name, setName] = useState("");
@@ -33,16 +34,15 @@ const QuizStarter = () => {
   return !start ? (
     <div className="Quiz-Starter">
       <h3>Set up your Quiz</h3>
-      <div className="my-3 ">
-        <img src={Img} alt="img" className="w-100" />
+      <div className="innerShadow">
+        <div >
+          <img src={Img} alt="img" className="w-75 borderRadius" />
+        </div>
       </div>
-      <div className="input-group my-3">
-        <span className="input-group-text" id="basic-addon1">
-          @
-        </span>
+      <div className="innerShadow my-4">
         <input
           type="text"
-          className="form-control"
+          className="input p-4"
           placeholder="Your Name"
           aria-label="Username"
           name="name"
@@ -51,29 +51,33 @@ const QuizStarter = () => {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <select
-        className="form-select my-3"
-        name="language"
-        value={language}
-        onChange={(e) => handleChange(e)}
-      >
-        <option defaultValue>Select Quiz Language</option>
-        <option value="Javascript">Javascript</option>
-        <option value="React Js">React Js</option>
-        <option value="React Ts">React Ts</option>
-      </select>
-      <select
-        className="form-select my-3"
-        name="questionNo"
-        value={questionNo}
-        onChange={(e) => handleChange(e)}
-      >
-        <option defaultValue>Question</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-      </select>
-      <button className="App-btn w-100" onClick={startQuiz}>
+      <div className="innerShadow my-4">
+        <select
+          className="input p-4"
+          name="language"
+          value={language}
+          onChange={(e) => handleChange(e)}
+        >
+          <option defaultValue>Select Quiz Language</option>
+          <option value="Javascript">Javascript</option>
+          <option value="React Js">React Js</option>
+          <option value="React Ts">React Ts</option>
+        </select>
+      </div>
+      <div className="innerShadow my-4">
+        <select
+          className="input  p-4"
+          name="questionNo"
+          value={questionNo}
+          onChange={(e) => handleChange(e)}
+        >
+          <option defaultValue>Question</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+        </select>
+      </div>
+      <button className="App-btn w-100 btnShadow" onClick={startQuiz}>
         Start Quiz
       </button>
     </div>
