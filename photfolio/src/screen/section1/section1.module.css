@@ -130,9 +130,9 @@
 }
 .userImg {
   position: absolute;
-  top: 15px;
-  left: 26%;
-  width: 250px;
+  top: 5px;
+  left: 18%;
+  width: 400px;
 }
 .introSection {
   flex: 0.5;
@@ -166,7 +166,7 @@
 @media only screen and (max-width: 1200px) {
   .userImg {
     position: absolute;
-    left: 27%;
+    left: 18%;
   }
 }
 
