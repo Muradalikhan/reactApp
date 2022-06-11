@@ -58,7 +58,7 @@ function Section1() {
           <div>
             <IconButton>
               <a href="https://github.com/muradalikhan" target="_blank">
-                <GitHubIcon sx={{ color: "#fff" }} />
+                <GitHubIcon fontSize="large" sx={{ color: "#fff" }} />
               </a>
             </IconButton>
             <IconButton>
@@ -66,22 +66,22 @@ function Section1() {
                 href="https://www.linkedin.com/in/murad-khan-dev/"
                 target="_blank"
               >
-                <LinkedInIcon sx={{ color: "#fff" }} />{" "}
+                <LinkedInIcon fontSize="large" sx={{ color: "#fff" }} />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://twitter.com/MuradKh53217145" target="_blank">
-                <TwitterIcon sx={{ color: "#fff" }} />
+                <TwitterIcon fontSize="large" sx={{ color: "#fff" }} />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://web.facebook.com/murad.khan.8/" target="_blank">
-                <FacebookIcon sx={{ color: "#fff" }} />
+                <FacebookIcon fontSize="large" sx={{ color: "#fff" }} />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://medium.com/@murad.jaddoon/" target="_blank">
-                <ArticleIcon sx={{ color: "#fff" }} />
+                <ArticleIcon fontSize="large" sx={{ color: "#fff" }} />
               </a>
             </IconButton>
           </div>
