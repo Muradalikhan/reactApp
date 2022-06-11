@@ -4,6 +4,7 @@ import creativeDesignImg from "../images/projects/creativeDesign.png";
 import hotelManagementImg from "../images/projects/hotelManagement.png";
 import yotubeCloneImg from "../images/projects/yotubeClone.png";
 import ImgrotatingImg from "../images/projects/Imgrotating.png";
+import quizAppImg from "../images/projects/quizapp.png";
 
 //technologies
 import htmlImg from "../images/logo/htmllogo.png";
@@ -20,6 +21,7 @@ const foodAppLink = "https://food-app-website.vercel.app/";
 const hotelManagmentLink = "https://hotel-mangement.vercel.app/dashboard";
 const youtubeCloneLink = "https://youtube-clone-two-psi.vercel.app/";
 const creativeDesignLink = "https://creative-design-website.vercel.app/";
+const quizAppLink = "https://quiz-app-lake-psi.vercel.app/";
 
 export const myProjects = [
   {
@@ -44,24 +46,10 @@ export const myProjects = [
     technologies: [reactImg, muiImg, firebaseImg],
   },
   {
-    img: foodAppImg,
-    title: "Food App",
-    demoLink: foodAppLink,
+    img: quizAppImg,
+    title: "Quiz App",
+    demoLink: quizAppLink,
     sourceLink: "",
-    technologies: [htmlImg, cssImg, jsImg],
-  },
-  {
-    img: creativeDesignImg,
-    title: "Creative Design",
-    demoLink: creativeDesignLink,
-    sourceLink: "",
-    technologies: [htmlImg, cssImg, jsImg],
-  },
-  {
-    img: hotelManagementImg,
-    title: "Hotel Management",
-    demoLink: hotelManagmentLink,
-    sourceLink: "",
-    technologies: [reactImg, muiImg, firebaseImg],
+    technologies: [reactImg, cssImg],
   },
 ];

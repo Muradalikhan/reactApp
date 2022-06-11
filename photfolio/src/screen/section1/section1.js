@@ -44,21 +44,23 @@ function Section1() {
         </div>
         <div className={Classes.introSection}>
           <h1>I AM</h1>
-          <h1 className={Classes.userName}>MURAD KHAN</h1>
-          <p className={Classes.designation}>Front end web developer</p>
+          <h1 className={Classes.userName}>Front End Web Developer</h1>
           <p className={Classes.para}>
-            Hi There, I’m Front-End Web Developer. It's been 2 years, I’m
-            working as web developer.I have developed many website and also
-            provided my services to college students by getting their projects
-            ready ASAP as a freelancer I have been part of some very good web
-            design projects.I'm also learning Back-End Development and looking
-            forward to be a Full Stack Web Developer.
+            Hi There, It's been 2 years, I’m working as web developer.I have
+            developed many website and also provided my services to college
+            students by getting their projects ready ASAP as a freelancer I have
+            been part of some very good web design projects.I'm also learning
+            Back-End Development and looking forward to be a Full Stack Web
+            Developer.
           </p>
           <button className={Classes.profileBtn}>Download Cv</button>
           <div>
             <IconButton>
               <a href="https://github.com/muradalikhan" target="_blank">
-                <GitHubIcon fontSize="large" sx={{ color: "#fff" }} />
+                <GitHubIcon
+                  fontSize="large"
+                  sx={{ color: "#fff", "&:hover": { color: "#ffcc00" } }}
+                />
               </a>
             </IconButton>
             <IconButton>
@@ -66,22 +68,34 @@ function Section1() {
                 href="https://www.linkedin.com/in/murad-khan-dev/"
                 target="_blank"
               >
-                <LinkedInIcon fontSize="large" sx={{ color: "#fff" }} />
+                <LinkedInIcon
+                  fontSize="large"
+                  sx={{ color: "#fff", "&:hover": { color: "#ffcc00" } }}
+                />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://twitter.com/MuradKh53217145" target="_blank">
-                <TwitterIcon fontSize="large" sx={{ color: "#fff" }} />
+                <TwitterIcon
+                  fontSize="large"
+                  sx={{ color: "#fff", "&:hover": { color: "#ffcc00" } }}
+                />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://web.facebook.com/murad.khan.8/" target="_blank">
-                <FacebookIcon fontSize="large" sx={{ color: "#fff" }} />
+                <FacebookIcon
+                  fontSize="large"
+                  sx={{ color: "#fff", "&:hover": { color: "#ffcc00" } }}
+                />
               </a>
             </IconButton>
             <IconButton>
               <a href="https://medium.com/@murad.jaddoon/" target="_blank">
-                <ArticleIcon fontSize="large" sx={{ color: "#fff" }} />
+                <ArticleIcon
+                  fontSize="large"
+                  sx={{ color: "#fff", "&:hover": { color: "#ffcc00" } }}
+                />
               </a>
             </IconButton>
           </div>
