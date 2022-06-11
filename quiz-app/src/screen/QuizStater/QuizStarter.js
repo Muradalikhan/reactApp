@@ -35,14 +35,14 @@ const QuizStarter = () => {
     <div className="Quiz-Starter">
       <h3>Set up your Quiz</h3>
       <div className="innerShadow">
-        <div >
+        <div>
           <img src={Img} alt="img" className="w-75 borderRadius" />
         </div>
       </div>
-      <div className="innerShadow my-4">
+      <div className="innerShadow my-4 p-2">
         <input
           type="text"
-          className="input p-4"
+          className="input p-2"
           placeholder="Your Name"
           aria-label="Username"
           name="name"
@@ -51,9 +51,9 @@ const QuizStarter = () => {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <div className="innerShadow my-4">
+      <div className="innerShadow my-4 p-2">
         <select
-          className="input p-4"
+          className="input p-2"
           name="language"
           value={language}
           onChange={(e) => handleChange(e)}
@@ -64,9 +64,9 @@ const QuizStarter = () => {
           <option value="React Ts">React Ts</option>
         </select>
       </div>
-      <div className="innerShadow my-4">
+      <div className="innerShadow my-4 p-2">
         <select
-          className="input  p-4"
+          className="input  p-2"
           name="questionNo"
           value={questionNo}
           onChange={(e) => handleChange(e)}
