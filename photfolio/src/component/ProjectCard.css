@@ -3,7 +3,7 @@
   box-shadow: 3px 3px 6px #dadada;
   border-radius: 5px;
   padding: 10px;
-  width: 320px;
+  width: 400px;
   min-width: 300px;
   display: flex;
   justify-content: space-around;
@@ -67,4 +67,13 @@
 .project-btn:hover {
   background-color: #fdd431;
   font-weight: 700;
+}
+.project-technology {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-technology img {
+  width: 70px;
+  height: 70px;
 }

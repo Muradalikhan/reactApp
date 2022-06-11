@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import ProjectCard from "../../component/ProjectCard";
+import { myProjects } from "../../mockup/projects";
 import classes from "./section4.module.css";
 
 export default function Section4() {
@@ -37,12 +38,9 @@ export default function Section4() {
           <i className="fa fa-arrow-left"></i>
         </div>
         <div className={classes.Projects} style={{ flex1: 0.7 }} ref={myRef}>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {myProjects?.map((item,index)=>(
+            <ProjectCard item={item} key={index}/>
+          ))}
         </div>
         <div style={{ flex1: 0.1 }} onClick={handleScrollRight}>
           <i className="fa fa-arrow-right"></i>
