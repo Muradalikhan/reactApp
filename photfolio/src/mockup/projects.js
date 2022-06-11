@@ -43,4 +43,25 @@ export const myProjects = [
     sourceLink: "",
     technologies: [reactImg, muiImg, firebaseImg],
   },
+  {
+    img: foodAppImg,
+    title: "Food App",
+    demoLink: foodAppLink,
+    sourceLink: "",
+    technologies: [htmlImg, cssImg, jsImg],
+  },
+  {
+    img: creativeDesignImg,
+    title: "Creative Design",
+    demoLink: creativeDesignLink,
+    sourceLink: "",
+    technologies: [htmlImg, cssImg, jsImg],
+  },
+  {
+    img: hotelManagementImg,
+    title: "Hotel Management",
+    demoLink: hotelManagmentLink,
+    sourceLink: "",
+    technologies: [reactImg, muiImg, firebaseImg],
+  },
 ];

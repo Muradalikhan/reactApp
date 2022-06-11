@@ -44,8 +44,7 @@ export default function Section3() {
               className={classes.progressBar}
               theme={{
                 success: {
-                  color: "rgb(223, 105, 180)",
-                  symbol: "80%",
+                  color: "rgb(223, 105, 180)"
                 },
               }}
             />
@@ -64,7 +63,7 @@ export default function Section3() {
               />
             </div>
             <div className={classes.circle}>
-              <label className={classes.label}>React ts</label>
+              <label className={classes.label}>Next js</label>
               <Progress
                 percent={88}
                 status="success"
@@ -76,9 +75,7 @@ export default function Section3() {
           </div>
           <div className={classes.innerRight}>
             <div className={classes.circle}>
-              <label className={classes.label}>
-                Styled <div>Component</div>
-              </label>
+              <label className={classes.label}>Mui </label>
               <Progress
                 percent={88}
                 status="success"
@@ -88,9 +85,7 @@ export default function Section3() {
               />
             </div>
             <div className={classes.circle}>
-              <label className={classes.label}>
-                Firebase <div>Database</div>
-              </label>
+              <label className={classes.label}>Firebase</label>
               <Progress
                 percent={88}
                 status="success"
