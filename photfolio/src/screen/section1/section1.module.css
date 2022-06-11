@@ -146,6 +146,8 @@
 }
 .introSection .userName {
   color: #ffcc00;
+  font-size: 40px;
+  font-weight: 700;
   letter-spacing: 0.2rem;
   transition: letter-spacing 1s;
 }
@@ -168,6 +170,9 @@
   .userImg {
     position: absolute;
     left: 18%;
+  }
+  .introSection {
+    flex: 0.8;
   }
 }
 
